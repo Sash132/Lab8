@@ -77,7 +77,7 @@ describe('Party Horn Tests', () => {
   });
 
   it('Honk Button is disabled when the textbook input is empty or a non-number', () => {
-    cy.get('#volume-number').clear().type(' ');
+    cy.get('#volume-number').clear();
     cy.get('#honk-btn').then(($el) => {
       expect($el).to.have.prop('disabled', true);
     });
